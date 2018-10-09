@@ -6,7 +6,10 @@ public class UserBean {
     private String city;
     private Integer age;
 
-    public UserBean(){
+    public UserBean(String name,String city,Integer age){
+        this.name = name;
+        this.city = city;
+        this.age = age;
     }
     public UserBean(Integer id,String name,String city,Integer age){
         this.id = id;

@@ -8,7 +8,7 @@ public class ConnDB {
         Connection connection = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai","root","123123");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai","root","123123");
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

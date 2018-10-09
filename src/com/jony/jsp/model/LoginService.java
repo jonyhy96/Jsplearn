@@ -23,10 +23,9 @@ public class LoginService extends HttpServlet {
         }
         if(new UserBeanService().check(username,password)){
             HttpSession session = req.getSession();
-            session.setMaxInactiveInterval(10);
             session.setAttribute("user",username);
             this.getServletContext().setAttribute("count",count.getAndAdd(1));
-            resp.sendRedirect("httpse");
+            resp.sendRedirect("menu");
         }else{
             resp.sendRedirect("index");
         }
